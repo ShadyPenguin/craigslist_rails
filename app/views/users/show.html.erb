@@ -3,11 +3,11 @@
 <h3>Your current posts</h3>
 <ul>
   <% current_user.posts.each do |post| %>
-    <li><%= post.title%></li>
+    <li><%= link_to( post.title , post_path(post)) %></li>
   <% end %>
 </ul>
 
-<h4><%= link_to("Create a new post", new_user_post_path(current_user.id)) %></h4>
+<h4><%= link_to("Create a new post", new_post_path(current_user.id)) %></h4>
 
 
 <h5><%= link_to("Logout", logout_path) %></h5>

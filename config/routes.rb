@@ -1,8 +1,8 @@
 Craigslist::Application.routes.draw do
-  
-  resources :users do
-    resources :posts
-  end
+
+  resources :users
+  resources :posts
+  resources :categories
 
 
   get '/logout' => 'users#logout'
@@ -50,7 +50,7 @@ Craigslist::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

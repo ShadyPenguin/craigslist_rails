@@ -1,0 +1,9 @@
+<h1>Welcome <%= current_user.username %></h1>
+
+<h3>Title: <%= @post.title %></h3>
+
+<p>Body: <%= @post.body %></p>
+<p>Category: <%= @category.name %></p>
+
+
+<h5><%= link_to("Back Home", user_path) %></h5>

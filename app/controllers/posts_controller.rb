@@ -16,10 +16,16 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+    @post = Post.find(params[:id])
+    @category = Category.find(@post.category_id)
+    render 'show'
+  end
+
   private
 
     def post_params
-      params.require(:post).permit(:title, :body, :category)
+      params.require(:post).permit(:title, :body, :category_id)
     end
 
 end
