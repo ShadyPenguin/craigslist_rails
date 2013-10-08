@@ -1,5 +1,5 @@
 <h1>Bro... Yolo</h1>
-<%= form_for :users do |f|%>
+<%= form_for @user, url: {action: 'login'} do |f|%>
 <%= f.label :email %>
 <%= f.email_field :email %>
 <%= f.label :password %>
@@ -7,4 +7,4 @@
 <%= f.submit "Log in bro"%>
 <% end %>
 
-<%= link_to("Create account bro", new_user_path ) %>
+<h5><%= link_to("Create account bro", new_user_path ) %></h5>
