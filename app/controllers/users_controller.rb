@@ -3,6 +3,10 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def new
+    @user = User.new
+  end
+
   def login
     user = User.authenticate(login_params)
     if user
@@ -12,10 +16,6 @@ class UsersController < ApplicationController
     else
       render 'index'
     end
-  end
-
-  def new
-    @user = User.new
   end
 
   def create
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
 
   def logout
     reset_session
-    redirect_to users_path
+    redirect_to root_path
   end
 
   private

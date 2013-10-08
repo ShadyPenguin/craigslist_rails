@@ -1,0 +1,11 @@
+<h1>Create a new post bro</h1>
+
+<%= form_for @post, url: {action: 'create' } do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %><br>
+  <%= f.label :body %>
+  <%= f.text_area :body %><br>
+  <%= f.label :category %>
+  <%= f.radio_button :category, 'category' %><br>
+  <%= f.submit "Create Post" %>
+<% end %>
